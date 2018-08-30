@@ -55,7 +55,7 @@ BEGIN
 							-- Create string to Bulk insert into the employment_wages_extract table using a FORMATFILE	   
 							Set @BulkInsert = 'BULK INSERT [bls_emp_wages].dbo.employment_wages_extract
 							FROM ''/*insert path to enb files*/\cn'+@NumberState+'16.enb''
-							WITH (FORMATFILE=''/*insert oath to enb files*/bulk_format.txt'')'
+							WITH (FORMATFILE=''/*insert path to enb files*/bulk_format.txt'')'
 
 							-- Execute string 
 							exec(@BulkInsert)
